@@ -32,230 +32,32 @@
 >저희는 미디어 파사드를 이용하여 보는 사람들에게 실감형 콘텐츠를 제공하였습니다.
 
 ---
-## 3°C 그리고 3가지 게임 구성
+## **개발 과정**
+
+
+### 3°C 그리고 3가지 게임 구성
 
 **지구의 온도가 3°C 만 오르면 온 세상은 물에 잠기게 된다.**
 
-> 이번 프로젝트의 중점 키워드인 **“기후위기”** 와 *“**지구의 온도가 현재 온도보다
-3°C 만 올라가기만 해도 지구는 물에 잠긴다”***  라는 문장을 연결지어
-총 3가지의 게임을 제작하였으며 사용자는 게임에서 이기면 1도가 올라가게 되고 지게되면 온도가 올라가지 않는 기획을 구성 하였습니다.
+> 이번 프로젝트의 중점 키워드인 **“기후위기”** 와 *“**지구의 온도가 현재 온도보다 3°C 만 올라가기만 해도 지구는 물에 잠긴다”***
+>
+> 라는 문장을 연결지어 총 3가지의 게임을 제작하였으며 그 중 2가지 게임은 "갤러그" , "팩맨" 의 로직을 참고하였습니다.
+>
+> 사용자는 게임에서 이기면 1도가 올라가게 되고 지게되면 온도가 올라가지 않는 기획을 구성 하였습니다.
 
-먼저 첫번째 게임같은 경우에는 ***“꿀벌이 지구에서 사라지게 된다면 자연생태계는
-망가지게 된다”***  라는 문장을 첫번쨰 게임의 컨셉으로 잡았습니다.
-**인간들의 무자비한 쓰레기 투기로 인해 자연이 훼손되며 자연스레 꿀벌의 개채수는 줄어들게 된다** 라는 점을 중점으로 제작하였습니다.
+---
+### 1. GameMaster
+![스크린샷(429)](https://github.com/user-attachments/assets/f1ac2fc3-19f8-4b58-a8eb-e0f255d9517b)
 
-두번째 게임의 주제는 ***“자동차의 매연가스”*** 입니다. 
-**자동차의 매연이나 공장에서 나오는 매연들이 하늘로 올라가 독성구름을 만들어 오존층을 파괴하고 산성비를 만들어 피해를 준다** 라는 내용을 컨셉으로 잡아 
-제작하였습니다.
-
-세번쨰 게임의 주제는 **“나무”** 입니다.
-**인간들의 무자비한 지역개발로 인해 나무들이 훼손되고 사라지면서 자연이 점점 사라지게 된다** 라는 점을 컨셉으로 잡아 제작하였습니다.
+> 자동차 팩맨 게임을 관리해주는 Master 스크립트를 제작하여
+>
+> **- List 를 사용한 오브젝트 관리**
 > 
-</aside>
-
-![KakaoTalk_20230712_154807787_14.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/ce9a784e-39da-4c88-b8b7-83d5a9b7cf68/KakaoTalk_20230712_154807787_14.jpg)
-
-1. **꿀벌 게임**
-
-![1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/20b389ce-ef65-4cd1-9259-5d49604153b9/1.png)
-
-![IMG_3715.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/e99d25f5-117c-4620-b9d2-2790a5235f58/IMG_3715.png)
-
-1. **팩맨 게임(자동차)**
-
-![2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/8bfe8349-db78-4e37-99d6-0e8686ace7e8/2.png)
-
-![나무.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/4e0e6f45-541f-492e-983c-ea70d9dc0306/%E1%84%82%E1%85%A1%E1%84%86%E1%85%AE.png)
-
-1. **갤러그 게임(나무)**
-
-![3.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/cdfbad48-dc95-408e-90ae-502307384ee4/3.png)
-
-# $\Large\bf{개발~목표}$
-
-<aside>
-<img src="/icons/school_gray.svg" alt="/icons/school_gray.svg" width="40px" /> **건국대학교**
-
-> 해당 프로젝트는 원래 전주대학교에서 진행될 예정이었으나 같은 산업협력단체에 
-속해있는 **건국대학교 서울캠퍼스** 에서 미디어 파사드를 진행했습니다.
-
-먼저 **노천극장 건물**인 **학생회관 외벽** 에 미디어를 송출하여야 한다는 점에서
-너무나도 큰 난관에 봉착 했습니다. 더군다나 영상이 아닌 게임으로 제작을 하는데
-있어서 개발을 할수 있는 인원이 저 혼자였고 3일이라는 시간안에 결과물을 
-송출하여 관객들에게 체험을 선사해야 하는 점이 문제점이었습니다
+> **- 코루틴을 활용한 타이머제작 및 Scene 이동**
 > 
-</aside>
-
-<aside>
-<img src="/icons/snippet_gray.svg" alt="/icons/snippet_gray.svg" width="40px" /> **1인 개발**
-
-> 미디어 파사드 프로젝트는 완성된 영상을 외벽에 송출해 사람들에게 선보이는 
-것이 일반적입니다.
-> 
-> 
-> 하지만 영상을 게임 형태로 제작해 실시간으로 체험할 수 있게 하는 아이디어는 
-> 리스크가 크고, 게임 개발이 가능한 인원이 저 혼자여서 프로젝트의 성공 여부가 
-> 온전히 저에게 달려있었습니다.
-> 
-> 팀원들과 논의한 주요 내용은 라이브 방식으로 사람들에게 체험 기회를 **어떻게 제공할지** 에 대한 것이었습니다. 
-> 
-> 다른 팀들은 영상물을 제작해 빔 프로젝터를 통해 송출하는 것으로 작업을 마무리
-> 하지만, 저희 작업물은 라이브 송출을 위해 극복해야 할 많은 단계가 있었습니다. 
-> 
-> 결국 멘토님과 상의 끝에 **NDI 5**라는 프로그램을 통해 게임을 송출할 수 있게 
-> 되었습니다. ****
-> 
-> **NDI 5**의 화면 캡처 기능을 활용해 외벽을 모니터로 사용하여 게임을 송출하고, 
-> 키보드를 통해 이를 체험할 수 있도록 기획했습니다.
-> 
-> 제한된 시간, 단 3일만에 프로젝트를 완성해야 했기에, 시간적 여유가 없었습니다. 
-> 
-> 이에 기존에 존재하는 고전 게임들을 참고하여 게임을 제작하기로 결정했습니다. 
-> 
-> 결국, **“갤러그”**와 **“팩맨”**의 게임 로직을 차용하여 새로운 게임을 제작했습니다.
-> 
-</aside>
-
-![PBL3.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/1fc01dc6-3f9e-41ac-8496-be6c366dc883/PBL3.png)
-
-![PBL4.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/458c9a98-0e25-4af7-8c70-8ca5891c3f48/PBL4.png)
-
-![PBL1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/0b1e4c09-2931-4610-bb1e-2888cd296179/PBL1.png)
-
-# $\Large\bf{개발과정}$
-
-![스크린샷(429).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/f3943019-a2d9-4708-a6f7-962bd2933858/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7(429).png)
-
-**자동차 팩맨 게임 ⬆️**
-
-![스크린샷(431).png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f4f04d2-e3d9-4279-8c92-dec2e691c5e0/cdb43cbb-2870-453f-9b26-aa1468ecfce5/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7(431).png)
-
-**나무 갤러그 게임 ⬆️**
-
-<aside>
-<img src="/icons/video-game-classic_gray.svg" alt="/icons/video-game-classic_gray.svg" width="40px" /> **UI**
-
-> 제작한 게임의 **UI 비주얼** 입니다.
-디자인 부분은 도트그래픽과 같은 느낌을 사용하여 최대한 고전게임의 느낌이 나게 제작하였으며 조작은 간단하게 방향키를 사용하여 플레이할수 있게 설정하였습니다.
-
-고전게임인 **“Packman”** , **“Galaga”** 의 로직을 참고하여 제작하였으며 **Timer** 를
-설정하여 제한시간내에 게임을 클리어 하여 “**Win”** , “**Lose”** **Scene** 으로 
-이동할수 있게 제작하였습니다.
-> 
-</aside>
-
-### $\large\bf{Scripts}$
-
-### GameMaster
-
-```csharp
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
-public class GameMaster : MonoBehaviour
-{
-    public AudioSource Audio;
-    public AudioClip BGM;
-    public Text timerText;
-    public List<GameObject> Dots = new List<GameObject>();
-    public string Scenename;
-    public GameObject Oil1;
-    public GameObject Oil2;
-    public GameObject Oil3;
-    public GameObject Oil4;
-    private float timeLeft = 50f;
-    private bool isPaused = false;
-
-    void Start()
-    {
-        StartCoroutine(WaitForSceneSwitch());
-        Audio.PlayOneShot(BGM);
-    }
-
-    void Update()
-    {
-        UpdateTimer();
-
-        if (!isPaused) 
-        {
-            CheckDotsRemaining();
-        }
-    }
-
-    IEnumerator WaitForSceneSwitch()
-    {
-        yield return new WaitForSeconds(50f);
-        SceneManager.LoadScene(Scenename);
-    }
-
-    void UpdateTimer()
-    {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft <= 0)
-        {
-            timeLeft = 0;
-        }
-
-        int minutes = (int)(timeLeft / 60);
-        int seconds = (int)(timeLeft % 60);
-        timerText.text = $"{minutes:00}:{seconds:00}";
-    }
-
-    void CheckDotsRemaining()
-    {
-        GameObject[] remainingDots = GameObject.FindGameObjectsWithTag("dot");
-        if (remainingDots.Length == 64)
-        {
-            Oil1.SetActive(true);
-        }
-        else if (remainingDots.Length == 60)
-        {
-            Oil2.SetActive(true);
-        }
-        else if (remainingDots.Length == 40)
-        {
-            Oil3.SetActive(true);
-        }
-        else if (remainingDots.Length == 20)
-        {
-            Oil4.SetActive(true);
-        }
-        else if (remainingDots.Length == 0)
-        {
-            SceneManager.LoadScene(Scenename);
-        }
-    }
-
-}
-
-```
-
-<aside>
-<img src="/icons/snippet_gray.svg" alt="/icons/snippet_gray.svg" width="40px" /> **GameMaster 스크립트 제작중 중점 사항**
-
-> 자동차 팩맨 게임의 로직을 담당하는 스크립트입니다.
-해당 스크립트를 작성하면서 **List[]** 라는 함수를 처음으로 적용시켜 스크립트를
-제작하였습니다. **List[]** 는 배열의 특징을 띄고 있는 함수이지만 배열이 
-늘어날때마다 직접 수정해야하는 일반 배열과는 다른 “**동적배열”** 이라고 불리며
-이 **“동적배열”** 은 배열의 갯수가 늘어나게 되면 자동적으로 채워지는 배열 
-함수입니다. 주로 오브젝트 풀링이나 게임안에서 생성되는 오브젝트가 많을때
-사용되는 함수 이며 사용자가 직접 수정할 필요가 없다라는 점에서 아주
-메리트가 있는 함수 입니다.
-**List[]** 함수를 사용함으로써 게임에 존재하는 **Dot** 이라는 오브젝트를 한번에 관리
-할수 있게 됩니다.
-
-또한 **timeLeft -= Time.deltaTime;** 와 **IEnumerator WaitForSceneSwitch()** 
-코루틴을 생성하여 **Timer**를 제작하고 지정한 시간이 종료되면 다음 Scene 으로 
-넘어갈수 있게 제작하였습니다.
-
-그 다음으로는 **FindGameObjectsWithTag** 를 사용하여 오브젝트의 태그중 **“Dot”**
-이라는 태그를 가진 오브젝트의 갯수를 확인하여 **UI** 에 존재하는 기름통의 이미지가 
-갯수에 따라 바뀌게 제작하였습니다.
-> 
-</aside>
+> **- 플레이어가 먹은 오브젝트의 태그를 확인하여 지정된 갯수에 도달하면 UI 이미지 변경**
+>
+> 로직을 구현 및 관리하였습니다.  
 
 ### Player
 
