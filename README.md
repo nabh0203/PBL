@@ -23,7 +23,7 @@
 > 
 >***“무엇이든 가능하다”***  라는 자신감을 내비칠 수 있게 해준 콘텐츠입니다.
 
-
+---
 ## 미디어 파사드를 활용한 콘텐츠
 ![스크린샷 2024-04-04 003301](https://github.com/user-attachments/assets/21cf60bd-f40f-4cb5-a247-9e46b52b3b64)
 
@@ -59,123 +59,14 @@
 >
 > 로직을 구현 및 관리하였습니다.  
 
-### Player
+### 2. Player
 
-```csharp
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-public class Player : MonoBehaviour
-{
-    public float Speed = 1f;
-    public int lives = 3;
-    public GameObject[] life = new GameObject[3];
-    private MeshRenderer playerMeshRenderer;
-    public string Scenename;
-    void Start()
-    {
-        playerMeshRenderer = GetComponent<MeshRenderer>();
-    }
-    private void Update()
-    {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        Vector3 newVelocity = rb.velocity;
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            newVelocity.x = -Speed;
-            transform.rotation = Quaternion.Euler(new Vector3(90, 90, -90));
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            newVelocity.x = Speed;
-            transform.rotation = Quaternion.Euler(new Vector3(90, 180, 180));
-        }
-        else
-        {
-            newVelocity.x = 0;
-        }
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            newVelocity.y = Speed;
-            transform.rotation = Quaternion.Euler(new Vector3(180, 90, -90));
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            newVelocity.y = -Speed;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 90, -90));
-        }
-        else
-        {
-            newVelocity.y = 0;
-        }
-
-        rb.velocity = newVelocity;
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        // 유령과 부딪히면 다음 씬으로 이동
-        if (other.gameObject.CompareTag("Cloud"))
-        {
-            lives--;
-
-            if (lives >= 0)
-            {
-                Destroy(life[lives]);
-            }
-
-            if (lives > 0)
-            {
-                StartCoroutine(FlashRedAndPause());
-            }
-            else
-            {
-                SceneManager.LoadScene(Scenename);
-            }
-        }
-    }
-
-    IEnumerator FlashRedAndPause()
-    {
-
-        int numFlashes = 3;
-        float flashDuration = 0.3f;
-
-        Rigidbody playerRigidbody = GetComponent<Rigidbody>();
-        if (playerRigidbody != null) playerRigidbody.velocity = Vector2.zero;
-
-        for (int i = 0; i < numFlashes; i++)
-        {
-            playerMeshRenderer.enabled = false;
-            yield return new WaitForSeconds(flashDuration);
-            playerMeshRenderer.enabled = true;
-            yield return new WaitForSeconds(flashDuration);
-        }
-    }
-}
-```
-
-<aside>
-<img src="/icons/snippet_gray.svg" alt="/icons/snippet_gray.svg" width="40px" /> **Player 스크립트 제작중 중점 사항**
-
-> 해당 스크립트는 팩맨 자동차 게임에 사용된 스크립트입니다.
-**Input.GetKey** 이라는 함수를 사용하여 체험하는 사용자가 키보드를 사용하여
-조작할수 있게 제작하였습니다.
+> 팩맨 자동차 게임에서 Player 로직을 담당하며
 > 
+> **코루틴** 을 사용하여 **Player** 가 **Cloud** 라는 태그를 가진 오브젝트와 트리거되면 깜빡이는
+>
+> 로직을 제작하였습니다.
 > 
-> 앞선 **GameMaster** 스크립트는 게임의 로직을 담당하는 스크립트 이고 
-> **Player** 스크립트는 사용자가 플레이하는 **Player** 에 관련된 스크립트 입니다.
-> 
-> 그리고 **Cloud** 라는 태그를 가진 오브젝트와 3번 **Trigger** 되면 게임 오버됩니다.
-> 
-> **IEnumerator FlashRedAndPause() 코루틴** 을 생성하여 **Player** 로 지정한 
-> 오브젝트가 **Cloud** 라는 태그를 가진 오브젝트와 **Trigger** 된다면 깜빡이는 
-> 효과를 설정하였습니다. 
-> 
-</aside>
-
 ### GalagaPlayer
 
 ```csharp
